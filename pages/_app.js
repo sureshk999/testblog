@@ -14,7 +14,6 @@ import { ClientReload } from '@/components/ClientReload'
 
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
-import { AppProps } from 'next/app'
 
 const isDevelopment = process.env.NODE_ENV === 'development'
 const isSocket = process.env.SOCKET
