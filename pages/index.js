@@ -5,9 +5,9 @@ import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
 
-import NewsletterForm from '@/components/NewsletterForm'
+import dynamic from 'next/dynamic'
 
-import { lazy, Suspense } from 'react'
+const NewsletterForm = dynamic(() => import('../components/NewsletterForm'))
 
 const MAX_DISPLAY = 5
 
@@ -95,9 +95,9 @@ export default function Home({ posts }) {
       )}
       {siteMetadata.newsletter.provider !== '' && (
         <div className="flex items-center justify-center pt-4">
-          <Suspense fallback={<div>Loading...</div>}>
-            <NewsletterForm />
-          </Suspense>
+          {/* <Suspense fallback={<div>Loading...</div>}> */}
+          <NewsletterForm />
+          {/* </Suspense> */}
         </div>
       )}
     </>
