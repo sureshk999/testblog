@@ -1,12 +1,12 @@
 const CACHE_NAME = 'my-pwa-cache'
-const urlsToCache = ['/', '/index.html']
+const urlsToCache = ['/']
 
 self.addEventListener('install', (event) => {
   // Perform the install steps
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       console.log('Opened cache')
-      return cache.addAll(urlsToCache)
+      return cache.add(urlsToCache)
     })
   )
 })
