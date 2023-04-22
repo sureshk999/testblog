@@ -5,9 +5,9 @@ import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
 
-import { lazy, Suspense } from 'react'
+import NewsletterForm from '@/components/NewsletterForm'
 
-const NewsletterForm = lazy(() => import('../components/NewsletterForm'))
+import { lazy, Suspense } from 'react'
 
 const MAX_DISPLAY = 5
 
