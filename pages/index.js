@@ -46,7 +46,13 @@ export default function Home({ posts }) {
                         <time dateTime={date}>{formatDate(date)}</time>
                         <dd />
 
-                        <Image src={image} alt="My Image" layout="responsive" />
+                        <Image
+                          src={image}
+                          alt="My Image"
+                          layout="responsive"
+                          height={200}
+                          width={200}
+                        />
 
                         {/* <img
                               
