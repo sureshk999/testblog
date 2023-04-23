@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react'
+import { lazy, Suspense } from 'react'
 
 import siteMetadata from '@/data/siteMetadata'
 
