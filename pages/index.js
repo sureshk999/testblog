@@ -39,25 +39,18 @@ export default function Home({ posts }) {
             return (
               <li key={slug} className="py-12">
                 <article>
-                  <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
+                  <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-start xl:space-y-0">
                     <dl>
                       <dt className="sr-only">Published on</dt>
-                      <dd className="text-base font-medium leading-6 text-gray-700 dark:text-gray-400">
-                        <time dateTime={date}>{formatDate(date)}</time>
-                        <dd />
 
+                      <dd className="mb-5 mt-0 mr-5 ml-0 text-base font-medium leading-6 text-gray-700 dark:text-gray-400">
                         <Image
-                          src={image}
+                          src="/books.webp"
                           alt="My Image"
+                          height={140}
+                          width={140}
                           layout="responsive"
-                          height={200}
-                          width={200}
                         />
-
-                        {/* <img
-                              
-                              src={image} height="200px">
-                            </img> */}
                       </dd>
                     </dl>
 
@@ -91,6 +84,8 @@ export default function Home({ posts }) {
                           Read more &rarr;
                         </Link>
                       </div>
+                      <br></br>
+                      <time dateTime={date}>{formatDate(date)}</time>
                     </div>
                   </div>
                 </article>
